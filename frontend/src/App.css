@@ -1,0 +1,435 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background: color-mix(in oklab, var(--bg) 92%, white);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-h);
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+
+.brandMark {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 10px 30px color-mix(in oklab, var(--accent) 20%, transparent);
+}
+
+.navLinks {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.navLinks a:hover {
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+.navCtas {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.hero {
+  padding: 56px 18px 22px;
+}
+
+.heroGrid {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.heroCopy {
+  padding: 18px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.title {
+  margin: 14px 0 10px;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -1.2px;
+  color: var(--text-h);
+}
+
+.subtitle {
+  max-width: 56ch;
+  margin: 0 0 18px;
+  color: var(--text);
+}
+
+.heroActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.statRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 520px;
+}
+
+.stat {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.statValue {
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: -0.3px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.heroCard {
+  border: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--surface) 85%, white),
+    color-mix(in oklab, var(--bg) 92%, white)
+  );
+  border-radius: 18px;
+  padding: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.10);
+}
+
+.heroCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--muted) 50%, transparent);
+}
+
+.chip {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.heroCardBody {
+  display: grid;
+  gap: 10px;
+}
+
+.miniTitle {
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.codeBlock {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.4;
+  display: block;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  white-space: pre;
+}
+
+.miniHint {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.section {
+  padding: 44px 18px;
+}
+
+.sectionHeader {
+  width: min(1120px, 100%);
+  margin: 0 auto 18px;
+}
+
+.sectionHeader h2 {
+  margin: 0 0 6px;
+  color: var(--text-h);
+  letter-spacing: -0.4px;
+}
+
+.sectionHeader p {
+  margin: 0;
+  color: var(--text);
+  max-width: 70ch;
+}
+
+.cards {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--text-h);
+  letter-spacing: -0.3px;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text);
+}
+
+.split {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.panelAccent {
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--accent) 12%, var(--surface)),
+    color-mix(in oklab, var(--accent2) 10%, var(--surface))
+  );
+}
+
+.panel h3 {
+  margin: 0 0 8px;
+  color: var(--text-h);
+}
+
+.panel p {
+  margin: 0;
+  color: var(--text);
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+
+.form {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.fieldFull {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  padding: 10px 12px;
+  font: inherit;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 16%, transparent);
+}
+
+.formActions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+  border: 1px solid transparent;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease,
+    box-shadow 120ms ease;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #0b2b1b;
+  box-shadow: 0 14px 40px color-mix(in oklab, var(--accent) 22%, transparent);
+}
+
+.btnPrimary:hover {
+  box-shadow: 0 18px 55px color-mix(in oklab, var(--accent) 26%, transparent);
+}
+
+.btnSoft {
+  background: color-mix(in oklab, var(--accent) 10%, var(--surface));
+  color: var(--text-h);
+  border-color: color-mix(in oklab, var(--accent) 18%, var(--border));
+}
+
+.btnGhost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+.btnGhost:hover {
+  background: var(--surface);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 18px;
+}
+
+.footerInner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footerSep {
+  opacity: 0.7;
+}
+
+@media (max-width: 960px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .navLinks {
+    display: none;
+  }
+}
