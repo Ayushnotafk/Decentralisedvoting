@@ -1,1 +1,187 @@
-This platform  is to simulate decentralised voting 
+🗳️ Decentralized Voting System (Hybrid Web2 + Web3)
+
+📌 Overview
+
+This project is a secure and transparent voting system that combines traditional web technologies with blockchain.
+
+- Web2 (Node.js + MongoDB) → handles user authentication and verification
+- Web3 (Ethereum + Smart Contract) → handles voting and result storage
+
+The goal is to ensure:
+
+- ✅ Only verified users can vote
+- ✅ Votes cannot be tampered with
+- ✅ Results are transparent and auditable
+
+---
+
+🚀 Features
+
+🔐 Authentication & Authorization
+
+- User registration and login using email/password
+- JWT-based authentication
+- Passwords securely hashed
+
+🪪 User Verification (Off-chain)
+
+- Users submit ID details (Aadhaar/College ID)
+- Only hashed ID is stored (privacy-safe)
+- Admin approves/rejects users
+
+👛 Wallet Integration
+
+- MetaMask wallet connection
+- Wallet address used as blockchain identity
+
+🗳️ Blockchain Voting
+
+- Votes are recorded using a smart contract
+- One wallet = one vote enforced
+- Voting time window enforced
+
+📊 Results Dashboard
+
+- Real-time results fetched from blockchain
+- Transparent and tamper-proof
+
+🧾 Audit System
+
+- Each vote has a transaction hash
+- Fully traceable and verifiable
+
+---
+
+🏗️ Tech Stack
+
+Frontend
+
+- React.js
+- wagmi / viem (Web3 integration)
+
+Backend
+
+- Node.js
+- Express.js
+- JWT Authentication
+
+Database
+
+- MongoDB
+
+Blockchain
+
+- Solidity (Smart Contract)
+- Hardhat (Local Blockchain)
+- MetaMask (Wallet)
+
+---
+
+⚙️ Project Architecture
+
+Frontend (React)
+→ Backend (Node.js + MongoDB) → User verification
+→ Blockchain (Ethereum Smart Contract) → Voting
+
+---
+
+🔄 How It Works
+
+1. User Authentication
+
+- User registers/logs in
+- Backend generates JWT
+
+2. Verification
+
+- User submits ID
+- Admin approves → user becomes verified
+
+3. Wallet Connection
+
+- User connects MetaMask
+- Wallet address becomes identity on blockchain
+
+4. Voting
+
+- User clicks vote
+- Smart contract records vote
+- Ensures one vote per wallet
+
+5. Results & Audit
+
+- Results fetched from blockchain
+- Transactions visible with hash
+
+---
+
+🧪 Local Setup (Development)
+
+1. Start Hardhat Node
+
+npx hardhat node
+
+---
+
+2. Deploy Contract
+
+npm run deploy:local
+
+---
+
+3. Run Backend
+
+npm run server
+
+---
+
+4. Run Frontend
+
+cd frontend
+npm run dev
+
+---
+
+5. Setup MetaMask
+
+- Add network:
+  
+  - RPC: http://127.0.0.1:8545
+  - Chain ID: 31337
+
+- Import Hardhat account (from terminal output)
+
+---
+
+💡 Unique Selling Points (USP)
+
+- 🔥 Hybrid Web2 + Web3 architecture
+- 🔐 Verified voting (prevents fake users)
+- 🗳️ One wallet = one vote (smart contract enforced)
+- 📊 Transparent real-time results
+- 🧾 Fully auditable system
+- 🔒 Privacy-preserving (hashed identity data)
+
+---
+
+⚠️ Current Limitations
+
+- Voting system works on local blockchain (Hardhat)
+- Not deployed to public testnet/mainnet yet
+- Admin approval is centralized
+
+---
+
+🔮 Future Improvements
+
+- Deploy to Ethereum testnet (Sepolia)
+- Add decentralized identity (DID)
+- Improve UI/UX
+- Add multi-election support
+- Gas optimization
+
+---
+
+🧠 Conclusion
+
+This project demonstrates how combining traditional backend systems with blockchain can create a secure, transparent, and tamper-proof voting system, solving major issues present in conventional voting methods.
